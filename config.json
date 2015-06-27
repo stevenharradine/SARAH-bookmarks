@@ -1,0 +1,9 @@
+{
+	"title": "Bookmarks",
+	"icon_id": "bookmark",
+	"users": [{
+		"type": "ADMIN"
+	}, {
+		"type": "USER"
+	}]
+}
