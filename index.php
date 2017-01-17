@@ -37,12 +37,12 @@
 			TableView2::createCell ()
 		));*/
 
-		while (($bookmark_row = mysql_fetch_array( $bookmark_data )) != null) {
+		foreach ($bookmark_data as $index => $record) {
 			$target = $sbookmark ? ' target="_blank"' : '';
 
 			$bookmarkModel->addRow ( array (
-				TableView2::createCell ('bookmark', '<a href="' . $bookmark_row['url'] . '" ' . $target . '>' . $bookmark_row['title'] . '</a>' ),
-				TableView2::createEdit ($bookmark_row['BOOKMARK_ID'])
+				TableView2::createCell ('bookmark', '<a href="' . $record['url'] . '" ' . $target . '>' . $record['title'] . '</a>' ),
+				TableView2::createEdit ($record['BOOKMARK_ID'])
 			));
 		}
 
